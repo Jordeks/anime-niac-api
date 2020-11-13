@@ -1,3 +1,3 @@
 class FanartSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title, :url, :username
 end
