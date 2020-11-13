@@ -8,12 +8,12 @@ class MessagesController < ApplicationController
     def create
         @message = Message.create(message_params)
         render json: @message
-      end
+    end
     
-      private
+    private
     
-      def message_params
+    def message_params
         params.permit(:username, :text)
-      end
+    end
     
 end
