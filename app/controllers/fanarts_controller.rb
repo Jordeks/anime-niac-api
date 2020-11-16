@@ -9,6 +9,13 @@ class FanartsController < ApplicationController
         fanart = Fanart.create(fanart_params)
         render json: fanart
     end
+
+    def update 
+        fanart = Fanart.find_by(id: params[:id])
+        if fanart.update(fanart_params)
+            render json: fanart
+        end 
+    end 
     
     private
     
